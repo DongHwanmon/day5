@@ -225,10 +225,10 @@ def master_key_list():
     return cafe_lists
     
 def get_total_info():
-    today = datetime.today().strftime("%Y/%m/%d")
+    
     url = "http://www.seoul-escape.com/reservation/change_date/"
     params = {
-        'current_date' : today
+        'current_date' : '2018/12/21'
     }
     response = requests.get(url,params = params).text
     document = json.loads(response)
